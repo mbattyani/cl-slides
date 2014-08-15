@@ -1,0 +1,5 @@
+(:guid 113 :version 0 :parent (:obj-id 10002 116)
+:slots ((meta-web::name "owner")
+(meta-web::user-name (:reader :trans-str :en "owner of the data" :fr "" :sp ""))
+(meta-web::description "")
+(meta-web::comment "")))

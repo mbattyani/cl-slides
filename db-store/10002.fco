@@ -1,0 +1,7 @@
+(:guid 1 :version 0 :parent (:obj-id 10001 2)
+:slots ((slides::user-name "marc")
+(webapp:password "")
+(slides::admin nil)
+(slides::developer nil)
+(slides::cookie "")
+(webapp:auto-login nil)))

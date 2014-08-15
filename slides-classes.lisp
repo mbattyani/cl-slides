@@ -1,0 +1,12 @@
+(in-package "SLIDES")
+
+(defvar *slides-classes-list* '(slides-user slides-app))
+
+(defun create-slides-classes (store)
+  (dolist (class *slides-classes-list*)
+     (meta::create-class-table store (find-class class))))
+
+(prog1 (meta-level:defclass slides-user nil ((user-name :value-type string :user-name (make-instance 'meta-level:translated-string :en "User name") :choices (list) :visible t :modifiable-groups '(:owner) :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default) (password :value-type string :user-name (make-instance 'meta-level:translated-string :en "Password") :choices (list) :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default) (admin :value-type boolean :user-name (make-instance 'meta-level:translated-string :en "Administrator") :choices (list) :visible t :modifiable-groups '(:admin) :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default) (developer :value-type boolean :user-name (make-instance 'meta-level:translated-string :en "Developer") :choices (list) :visible t :modifiable-groups '(:admin) :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default) (cookie :value-type string :user-name (make-instance 'meta-level:translated-string :en "Cookie") :choices (list) :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default) (auto-login :value-type boolean :user-name (make-instance 'meta-level:translated-string :en "Auto-login") :choices (list) :visible t :modifiable-groups '(:admin) :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default) (clipboard :value-type string :user-name (make-instance 'meta-level:translated-string :en "clipboard") :initform (make-instance 'interface::clipboard :store meta-level::*memory-store*) :choices (list) :stored nil :new-objects-first nil :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default)) (:user-name (make-instance 'meta-level:translated-string :en "User") :guid 1)))
+
+(prog1 (meta-level:defclass slides-app nil ((users :value-type slides-user :user-name (make-instance 'meta-level:translated-string :en "CL-Slides users") :choices (list) :visible t :modifiable-groups '(:dev) :list-of-values t :sql-length 0 :nb-decimals 0 :get-value-sql "" :view-type :default)) (:user-name (make-instance 'meta-level:translated-string :en "The CL-Slides App") :guid 2)))
+
