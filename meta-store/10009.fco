@@ -6,4 +6,6 @@
 (meta-web::sources-directory "")
 (meta-web::print-in-doc t)
 (meta-web::classes ((:obj-id 10011 112)
-(:obj-id 10052 112)))))
+(:obj-id 10052 112)
+(:obj-id 10067 112)
+(:obj-id 10082 112)))))

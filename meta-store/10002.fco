@@ -20,4 +20,4 @@
 (meta-web::other-documents nil)
 (meta-web::project-version "0")
 (meta-web::version-date nil)
-(meta-web::last-class-guid 2)))
+(meta-web::last-class-guid 4)))

@@ -4,4 +4,5 @@
 (slides::admin nil)
 (slides::developer t)
 (slides::cookie "C=bXc00s5-z61cVwJl")
-(webapp:auto-login t)))
+(webapp:auto-login t)
+(slides::presentations ((:obj-id 10012 4)))))

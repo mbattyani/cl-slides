@@ -1,0 +1,3 @@
+(:guid 3 :version 0 :parent (:obj-id 10012 4)
+:slots ((slides::title "The first slide")
+(slides::content "this is some text content")))
