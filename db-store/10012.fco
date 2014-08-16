@@ -1,3 +1,4 @@
 (:guid 4 :version 0 :parent (:obj-id 10011 1)
 :slots ((slides::title "The first pres")
-(slides::slides ((:obj-id 10013 3)))))
+(slides::slides ((:obj-id 10013 3)
+(:obj-id 10014 3)))))

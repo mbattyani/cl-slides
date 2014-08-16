@@ -13,6 +13,7 @@
 	       (:file "pages")
 	       (:file "style")
                (:file "user")
+               (:file "presentation")
                (:file "slides-app")
                (:file "global"))
   :depends-on (:webapp :iterate :optima :fare-quasiquote-extras))
