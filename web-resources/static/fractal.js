@@ -201,7 +201,7 @@ function getxh()
   catch (e) {
     try {
       x=new ActiveXObject("Microsoft.XMLHTTP");
-    } 
+    }
     catch (E) {
       x=false;
     }
@@ -233,18 +233,18 @@ function encPar(wide)
 
 var encPar_OK= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*@-_./';
 
-function encHex2(v) 
+function encHex2(v)
 {
     return '%'+encHex2_DIGITS.charAt(v>>>4)+encHex2_DIGITS.charAt(v&0xF);
 }
 var encHex2_DIGITS= '0123456789ABCDEF';
 
-function encUtf8(wide) 
+function encUtf8(wide)
 {
     var c, s;
     var enc= '';
     var i= 0;
-    while(i<wide.length) 
+    while(i<wide.length)
     {
 	c= wide.charCodeAt(i++);
 	// handle UTF-16 surrogates

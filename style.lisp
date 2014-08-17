@@ -1,7 +1,8 @@
 (in-package #:slides)
 
-(defun obj-url (object &optional view)
-  (interface::encode-object-url object :args (when view (list :view view))))
+(defun obj-url (obj &optional view (page "object"))
+  (interface::encode-object-url
+   obj :args `(,@(when view `(:view ,view)) :page ,page)))
 
 (defmethod insert-page-title ((app slides-app) page)
   (html:html "CL-Slides - " (webapp::name page)))
@@ -210,3 +211,17 @@
      (:footer
       ((:p :class "pull-right") ((:a :href "#") "Back to top"))
       (:p "&copy; 2014 Marc Battyani. &middot; " ((:a :href "#") "Privacy") " &middot; " ((:a :href "#") "Terms")))))))
+
+(defmethod write-page ((app slides-app) (page raw-page-desc))
+  (html:html
+   (:doctype)
+   (:html
+    (:head
+     (:title (insert-page-title app page))
+     (insert-html-meta app page)
+     (insert-html-head-links app page)
+     ((:link :rel "stylesheet" :href "/static/slides.css"))
+     ((:script :src "/static/slides.js")))
+    (:body
+     (:object-view)
+     :connect-views))))

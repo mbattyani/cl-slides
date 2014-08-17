@@ -47,7 +47,7 @@
 (meta-web::create-new-object nil)
 (meta-web::new-objects-first nil)
 (meta-web::dont-display-null-value nil)
-(meta-web::view-type :default)
+(meta-web::view-type :list-val)
 (meta-web::slot-view-name "")
 (meta-web::duplicate-value-fn nil)
 (meta-web::make-copy-string nil)

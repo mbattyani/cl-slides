@@ -6,6 +6,9 @@
 (defclass obj-page-desc (page-desc)
   ())
 
+(defclass raw-page-desc (page-desc)
+  ())
+
 (make-instance 'home-page-desc
    :name "home"
    :title "Slides - Home"
@@ -24,3 +27,7 @@
                ((:div :class "page-header"))
                (:h1 "Settings")
                (:object-view *app*))))
+
+(make-instance 'raw-page-desc
+   :name "raw-page"
+   :title "CL-Slides - ")

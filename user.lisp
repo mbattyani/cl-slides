@@ -40,9 +40,9 @@
   `(:br
     (:h1 "My presentations")
     (:slot-table presentations)
-    ((:fn-link start-new-pres :class "btn btn-lg btn-success") "Make a new presentation")))
+    ((:fn-link start-new-pres :class "btn btn-lg btn-success") "Make a new presentation") :br))
 
 (make-instance 'interface::object-view :object-class 'slides-user :special-view t
 	       :country-languages '(:en :fr) :name "usettings" :source-code
   `((:h1 "My Settings")
-    (:slot-table user-name auto-login)))
+    (:slot-table user-name auto-login) :br))
